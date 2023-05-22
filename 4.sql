@@ -1,0 +1,1 @@
+SELECT ORD_ID,PRO_NAME FROM supplier_pricing INNER JOIN `order` ON supplier_pricing.PRICING_ID=`order`.PRICING_ID INNER JOIN product ON  supplier_pricing.PRO_ID=product.PRO_ID WHERE CUS_ID=2

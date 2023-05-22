@@ -1,0 +1,6 @@
+
+SELECT sr.SUPP_ID, sr.SUPP_NAME, sr.SUPP_CITY, sr.SUPP_PHONE
+FROM supplier sr 
+INNER JOIN supplier_pricing spg ON sr.SUPP_ID = spg.SUPP_ID
+GROUP BY sr.SUPP_ID
+HAVING COUNT(DISTINCT spg.PRO_ID) > 1;
